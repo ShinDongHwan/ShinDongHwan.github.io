@@ -6,7 +6,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <Ontology rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6">
+    <Ontology rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl">
         <imports rdf:resource="package://knowrob_common/owl/knowrob.owl"/>
         <rdfs:comment>The pizza ontology that describes various pizzas based on their toppings.</rdfs:comment>
     </Ontology>
@@ -24,64 +24,64 @@
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasBase -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#hasBase -->
 
-    <ObjectProperty rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasBase">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasIngredient"/>
-        <inverseOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#isBaseOf"/>
+    <ObjectProperty rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasBase">
+        <rdfs:subPropertyOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasIngredient"/>
+        <inverseOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#isBaseOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#Pizza"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PizzaBase"/>
+        <rdfs:domain rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#Pizza"/>
+        <rdfs:range rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaBase"/>
     </ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasIngredient -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#hasIngredient -->
 
-    <ObjectProperty rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasIngredient">
+    <ObjectProperty rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasIngredient">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <inverseOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#isIngredientOf"/>
+        <inverseOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#isIngredientOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
     </ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasTopping -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping -->
 
-    <ObjectProperty rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasTopping">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasIngredient"/>
-        <inverseOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#isToppingOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#Pizza"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PizzaTopping"/>
+    <ObjectProperty rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping">
+        <rdfs:subPropertyOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasIngredient"/>
+        <inverseOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#isToppingOf"/>
+        <rdfs:domain rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#Pizza"/>
+        <rdfs:range rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaTopping"/>
     </ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#isBaseOf -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#isBaseOf -->
 
-    <ObjectProperty rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#isBaseOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#isIngredientOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PizzaBase"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#Pizza"/>
+    <ObjectProperty rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#isBaseOf">
+        <rdfs:subPropertyOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#isIngredientOf"/>
+        <rdfs:domain rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaBase"/>
+        <rdfs:range rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#Pizza"/>
     </ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#isIngredientOf -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#isIngredientOf -->
 
-    <ObjectProperty rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#isIngredientOf">
+    <ObjectProperty rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#isIngredientOf">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
     </ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#isToppingOf -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#isToppingOf -->
 
-    <ObjectProperty rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#isToppingOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#isIngredientOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PizzaTopping"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#Pizza"/>
+    <ObjectProperty rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#isToppingOf">
+        <rdfs:subPropertyOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#isIngredientOf"/>
+        <rdfs:domain rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaTopping"/>
+        <rdfs:range rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#Pizza"/>
     </ObjectProperty>
     
 
@@ -97,135 +97,135 @@
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#AmericanHotPizza -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#AmericanHotPizza -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#AmericanHotPizza">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#NamedPizza"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#AmericanHotPizza">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#NamedPizza"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasTopping"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#JalapenoPepperTopping"/>
+                <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#JalapenoPepperTopping"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasTopping"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#MozzarellaTopping"/>
+                <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#MozzarellaTopping"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasTopping"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PepperoniTopping"/>
+                <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PepperoniTopping"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasTopping"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#TomatoTopping"/>
-            </Restriction>
-        </rdfs:subClassOf>
-    </Class>
-    
-
-
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#AmericanaPizza -->
-
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#AmericanaPizza">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#NamedPizza"/>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasTopping"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#MozzarellaTopping"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasTopping"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PepperoniTopping"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasTopping"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#TomatoTopping"/>
+                <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#TomatoTopping"/>
             </Restriction>
         </rdfs:subClassOf>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#AnchovyTopping -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#AmericanaPizza -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#AnchovyTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#SeafoodTopping"/>
-    </Class>
-    
-
-
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#CaperTopping -->
-
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#CaperTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#VegetableTopping"/>
-    </Class>
-    
-
-
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#CheeseTopping -->
-
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#CheeseTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PizzaTopping"/>
-    </Class>
-    
-
-
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#DeepPanBase -->
-
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#DeepPanBase">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PizzaBase"/>
-        <disjointWith rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#ThinAndCrispyBase"/>
-    </Class>
-    
-
-
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#GreenPepperTopping -->
-
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#GreenPepperTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PepperTopping"/>
-    </Class>
-    
-
-
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#HamTopping -->
-
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#HamTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#MeatTopping"/>
-    </Class>
-    
-
-
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#JalapenoPepperTopping -->
-
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#JalapenoPepperTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PepperTopping"/>
-    </Class>
-    
-
-
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#MargheritaPizza -->
-
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#MargheritaPizza">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#NamedPizza"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#AmericanaPizza">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#NamedPizza"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasTopping"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#MozzarellaTopping"/>
+                <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#MozzarellaTopping"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasTopping"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#TomatoTopping"/>
+                <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PepperoniTopping"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#TomatoTopping"/>
+            </Restriction>
+        </rdfs:subClassOf>
+    </Class>
+    
+
+
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#AnchovyTopping -->
+
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#AnchovyTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#SeafoodTopping"/>
+    </Class>
+    
+
+
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#CaperTopping -->
+
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#CaperTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#VegetableTopping"/>
+    </Class>
+    
+
+
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#CheeseTopping -->
+
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#CheeseTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaTopping"/>
+    </Class>
+    
+
+
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#DeepPanBase -->
+
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#DeepPanBase">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaBase"/>
+        <disjointWith rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#ThinAndCrispyBase"/>
+    </Class>
+    
+
+
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#GreenPepperTopping -->
+
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#GreenPepperTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PepperTopping"/>
+    </Class>
+    
+
+
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#HamTopping -->
+
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#HamTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#MeatTopping"/>
+    </Class>
+    
+
+
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#JalapenoPepperTopping -->
+
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#JalapenoPepperTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PepperTopping"/>
+    </Class>
+    
+
+
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#MargheritaPizza -->
+
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#MargheritaPizza">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#NamedPizza"/>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#MozzarellaTopping"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#TomatoTopping"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A pizza that only has Mozarella and Tomato toppings</rdfs:comment>
@@ -233,162 +233,162 @@
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#MeatTopping -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#MeatTopping -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#MeatTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PizzaTopping"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#MeatTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaTopping"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#MozzarellaTopping -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#MozzarellaTopping -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#MozzarellaTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#CheeseTopping"/>
-        <disjointWith rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#ParmezanTopping"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#MozzarellaTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#CheeseTopping"/>
+        <disjointWith rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#ParmezanTopping"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#MushroomTopping -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#MushroomTopping -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#MushroomTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#VegetableTopping"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#MushroomTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#VegetableTopping"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#NamedPizza -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#NamedPizza -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#NamedPizza">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#Pizza"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#NamedPizza">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#Pizza"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#OliveTopping -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#OliveTopping -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#OliveTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#VegetableTopping"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#OliveTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#VegetableTopping"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#OnionTopping -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#OnionTopping -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#OnionTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#VegetableTopping"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#OnionTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#VegetableTopping"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#ParmezanTopping -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#ParmezanTopping -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#ParmezanTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#CheeseTopping"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#ParmezanTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#CheeseTopping"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PepperTopping -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#PepperTopping -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PepperTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#VegetableTopping"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#PepperTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#VegetableTopping"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PepperoniTopping -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#PepperoniTopping -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PepperoniTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#MeatTopping"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#PepperoniTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#MeatTopping"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#Pizza -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#Pizza -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#Pizza">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#mypizza"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#Pizza">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#mypizza"/>
         <rdfs:comment></rdfs:comment>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PizzaBase -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaBase -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PizzaBase">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#mypizza"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaBase">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#mypizza"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PizzaTopping -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaTopping -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PizzaTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#mypizza"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#mypizza"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PrawnTopping -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#PrawnTopping -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PrawnTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#SeafoodTopping"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#PrawnTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#SeafoodTopping"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#RedPepperTopping -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#RedPepperTopping -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#RedPepperTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PepperTopping"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#RedPepperTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PepperTopping"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#SalamiTopping -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#SalamiTopping -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#SalamiTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#MeatTopping"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#SalamiTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#MeatTopping"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#SeafoodTopping -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#SeafoodTopping -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#SeafoodTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PizzaTopping"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#SeafoodTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaTopping"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#SohoPizza -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#SohoPizza -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#SohoPizza">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#NamedPizza"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#SohoPizza">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#NamedPizza"/>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasTopping"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#MozzarellaTopping"/>
+                <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#MozzarellaTopping"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasTopping"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#OliveTopping"/>
+                <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#OliveTopping"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasTopping"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#ParmezanTopping"/>
+                <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#ParmezanTopping"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
-                <onProperty rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#hasTopping"/>
-                <someValuesFrom rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#TomatoTopping"/>
+                <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#TomatoTopping"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A pizza that only has Mozarella and Tomato toppings</rdfs:comment>
@@ -396,49 +396,49 @@
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#SpicyBeefTopping -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#SpicyBeefTopping -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#SpicyBeefTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#MeatTopping"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#SpicyBeefTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#MeatTopping"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#ThinAndCrispyBase -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#ThinAndCrispyBase -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#ThinAndCrispyBase">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PizzaBase"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#ThinAndCrispyBase">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaBase"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#TomatoTopping -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#TomatoTopping -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#TomatoTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#VegetableTopping"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#TomatoTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#VegetableTopping"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#TunaTopping -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#TunaTopping -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#TunaTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#SeafoodTopping"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#TunaTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#SeafoodTopping"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#VegetableTopping -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#VegetableTopping -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#VegetableTopping">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PizzaTopping"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#VegetableTopping">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaTopping"/>
     </Class>
     
 
 
-    <!-- http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#mypizza -->
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#mypizza -->
 
-    <Class rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#mypizza">
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#mypizza">
         <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#FingerFood"/>
     </Class>
     
@@ -455,63 +455,63 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#AmericanHotPizza"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#AmericanaPizza"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#MargheritaPizza"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#SohoPizza"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#AmericanHotPizza"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#AmericanaPizza"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#MargheritaPizza"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#SohoPizza"/>
         </members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#AnchovyTopping"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PrawnTopping"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#TunaTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#AnchovyTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#PrawnTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#TunaTopping"/>
         </members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#CaperTopping"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#MushroomTopping"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#OliveTopping"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#OnionTopping"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PepperTopping"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#TomatoTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#CaperTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#MushroomTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#OliveTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#OnionTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#PepperTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#TomatoTopping"/>
         </members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#CheeseTopping"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#MeatTopping"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#SeafoodTopping"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#VegetableTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#CheeseTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#MeatTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#SeafoodTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#VegetableTopping"/>
         </members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#GreenPepperTopping"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#JalapenoPepperTopping"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#RedPepperTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#GreenPepperTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#JalapenoPepperTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#RedPepperTopping"/>
         </members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#HamTopping"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PepperoniTopping"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#SalamiTopping"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#SpicyBeefTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#HamTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#PepperoniTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#SalamiTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#SpicyBeefTopping"/>
         </members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#Pizza"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PizzaBase"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/donghwan/ontologies/2016/0/untitled-ontology-6#PizzaTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#Pizza"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaBase"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaTopping"/>
         </members>
     </rdf:Description>
 </rdf:RDF>
@@ -519,4 +519,3 @@
 
 
 <!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
-
