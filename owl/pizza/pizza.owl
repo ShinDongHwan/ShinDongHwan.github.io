@@ -1,14 +1,23 @@
 <?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <Ontology rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl">
-        <imports rdf:resource="package://knowrob_common/owl/knowrob.owl"/>
         <rdfs:comment>The pizza ontology that describes various pizzas based on their toppings.</rdfs:comment>
+        <imports rdf:resource="package://knowrob_common/owl/knowrob.owl"/>
     </Ontology>
     
 
@@ -27,11 +36,11 @@
     <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#hasBase -->
 
     <ObjectProperty rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasBase">
-        <rdfs:subPropertyOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasIngredient"/>
-        <inverseOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#isBaseOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#Pizza"/>
         <rdfs:range rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaBase"/>
+        <rdfs:subPropertyOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasIngredient"/>
+        <inverseOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#isBaseOf"/>
     </ObjectProperty>
     
 
@@ -39,9 +48,9 @@
     <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#hasIngredient -->
 
     <ObjectProperty rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasIngredient">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
         <inverseOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#isIngredientOf"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </ObjectProperty>
     
 
@@ -49,10 +58,10 @@
     <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping -->
 
     <ObjectProperty rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping">
-        <rdfs:subPropertyOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasIngredient"/>
-        <inverseOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#isToppingOf"/>
         <rdfs:domain rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#Pizza"/>
         <rdfs:range rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaTopping"/>
+        <rdfs:subPropertyOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasIngredient"/>
+        <inverseOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#isToppingOf"/>
     </ObjectProperty>
     
 
@@ -60,9 +69,9 @@
     <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#isBaseOf -->
 
     <ObjectProperty rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#isBaseOf">
-        <rdfs:subPropertyOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#isIngredientOf"/>
-        <rdfs:domain rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaBase"/>
         <rdfs:range rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#Pizza"/>
+        <rdfs:domain rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaBase"/>
+        <rdfs:subPropertyOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#isIngredientOf"/>
     </ObjectProperty>
     
 
@@ -70,8 +79,8 @@
     <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#isIngredientOf -->
 
     <ObjectProperty rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#isIngredientOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </ObjectProperty>
     
 
@@ -79,9 +88,9 @@
     <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#isToppingOf -->
 
     <ObjectProperty rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#isToppingOf">
-        <rdfs:subPropertyOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#isIngredientOf"/>
-        <rdfs:domain rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaTopping"/>
         <rdfs:range rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#Pizza"/>
+        <rdfs:domain rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaTopping"/>
+        <rdfs:subPropertyOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#isIngredientOf"/>
     </ObjectProperty>
     
 
@@ -104,13 +113,7 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
-                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#JalapenoPepperTopping"/>
-            </Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <Restriction>
-                <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
-                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#MozzarellaTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#TomatoTopping"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -122,7 +125,13 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
-                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#TomatoTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#JalapenoPepperTopping"/>
+            </Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <Restriction>
+                <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#MozzarellaTopping"/>
             </Restriction>
         </rdfs:subClassOf>
     </Class>
@@ -142,13 +151,13 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
-                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PepperoniTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#TomatoTopping"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
-                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#TomatoTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#PepperoniTopping"/>
             </Restriction>
         </rdfs:subClassOf>
     </Class>
@@ -219,13 +228,13 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
-                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#MozzarellaTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#TomatoTopping"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
-                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#TomatoTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#MozzarellaTopping"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A pizza that only has Mozarella and Tomato toppings</rdfs:comment>
@@ -370,7 +379,7 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
-                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#MozzarellaTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#TomatoTopping"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -388,7 +397,7 @@
         <rdfs:subClassOf>
             <Restriction>
                 <onProperty rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#hasTopping"/>
-                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#TomatoTopping"/>
+                <someValuesFrom rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#MozzarellaTopping"/>
             </Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A pizza that only has Mozarella and Tomato toppings</rdfs:comment>
@@ -436,11 +445,89 @@
     
 
 
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#agent -->
+
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#agent">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#object"/>
+    </Class>
+    
+
+
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#breeze -->
+
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#breeze">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#effect"/>
+    </Class>
+    
+
+
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#effect -->
+
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#effect">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#wumpus_world"/>
+    </Class>
+    
+
+
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#glitter -->
+
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#glitter">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#effect"/>
+    </Class>
+    
+
+
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#gold -->
+
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#gold">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#object"/>
+    </Class>
+    
+
+
     <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#mypizza -->
 
     <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#mypizza">
         <rdfs:subClassOf rdf:resource="http://knowrob.org/kb/knowrob.owl#FingerFood"/>
     </Class>
+    
+
+
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#object -->
+
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#object">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#wumpus_world"/>
+    </Class>
+    
+
+
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#pit -->
+
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#pit">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#object"/>
+    </Class>
+    
+
+
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#smell -->
+
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#smell">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#effect"/>
+    </Class>
+    
+
+
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#wumpus -->
+
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#wumpus">
+        <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#object"/>
+    </Class>
+    
+
+
+    <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#wumpus_world -->
+
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#wumpus_world"/>
     
 
 
@@ -453,24 +540,41 @@
      -->
 
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#AmericanHotPizza"/>
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#AmericanaPizza"/>
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#MargheritaPizza"/>
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#SohoPizza"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#GreenPepperTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#JalapenoPepperTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#RedPepperTopping"/>
         </members>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#AnchovyTopping"/>
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#PrawnTopping"/>
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#TunaTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#CheeseTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#MeatTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#SeafoodTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#VegetableTopping"/>
         </members>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#Pizza"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaBase"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaTopping"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#HamTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#PepperoniTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#SalamiTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#SpicyBeefTopping"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#CaperTopping"/>
             <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#MushroomTopping"/>
@@ -481,41 +585,25 @@
         </members>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#CheeseTopping"/>
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#MeatTopping"/>
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#SeafoodTopping"/>
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#VegetableTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#AmericanHotPizza"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#AmericanaPizza"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#MargheritaPizza"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#SohoPizza"/>
         </members>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#GreenPepperTopping"/>
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#JalapenoPepperTopping"/>
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#RedPepperTopping"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#HamTopping"/>
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#PepperoniTopping"/>
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#SalamiTopping"/>
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#SpicyBeefTopping"/>
-        </members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#Pizza"/>
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaBase"/>
-            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#PizzaTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#AnchovyTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#PrawnTopping"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#TunaTopping"/>
         </members>
     </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
