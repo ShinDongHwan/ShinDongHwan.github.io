@@ -465,6 +465,7 @@
 
     <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#effect">
         <rdfs:subClassOf rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#wumpus_world"/>
+        <disjointWith rdf:resource="http://shindonghwan.github.io/owl/pizza/pizza.owl#object"/>
     </Class>
     
 
@@ -527,7 +528,9 @@
 
     <!-- http://shindonghwan.github.io/owl/pizza/pizza.owl#wumpus_world -->
 
-    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#wumpus_world"/>
+    <Class rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#wumpus_world">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </Class>
     
 
 
@@ -591,6 +594,14 @@
             <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#AmericanaPizza"/>
             <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#MargheritaPizza"/>
             <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#SohoPizza"/>
+        </members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#breeze"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#glitter"/>
+            <rdf:Description rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl#smell"/>
         </members>
     </rdf:Description>
     <rdf:Description>
