@@ -16,7 +16,7 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:wumpus="http://shindonghwan.github.io/owl/pizza/pizza.owl">
+     xmlns:wumpus="http://shindonghwan.github.io/owl/pizza/pizza.owl#">
     <Ontology rdf:about="http://shindonghwan.github.io/owl/pizza/pizza.owl">
         <rdfs:comment>The pizza ontology that describes various pizzas based on their toppings.</rdfs:comment>
         <imports rdf:resource="package://knowrob_common/owl/knowrob.owl"/>
